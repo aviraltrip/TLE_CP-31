@@ -13,10 +13,22 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
  
 void solutionForProblem() {
-    lli n;
+    lli n,count=0;
     cin >> n;
-    if ((n&(n-1))==0) cout << "NO\n";
-    else cout << "YES\n";
+    string s;
+    cin >> s;
+    for (lli i=2;i<n;i++) {
+        if (s[i-2]=='.' && s[i-1]=='.' && s[i]=='.') {
+            cout << 2 << endl;
+            return; 
+        }
+    }
+    for (char c:s) {
+        if (c=='.') {
+            count++;
+        }
+    }
+    cout << count << endl;
 }
  
 int main() {

@@ -1,4 +1,3 @@
-
 // © Aviral Tripathi.
 // For all your days prepare, And meet them ever alike:
 // When you are the anvil, bear — When you are the hammer, strike.
@@ -11,14 +10,15 @@ using namespace std;
 #define inf LLONG_MAX
 #define MOD 1e9+7 
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
- 
+
 void solutionForProblem() {
-    lli n;
-    cin >> n;
-    if ((n&(n-1))==0) cout << "NO\n";
-    else cout << "YES\n";
+    lli n,k;
+    cin >> n >> k;
+    if (n%2==0) cout << "YES\n";
+    else if ((k%2==1) && (n>=k)) cout << "YES\n"; 
+    else cout << "NO\n";
 }
- 
+
 int main() {
     NFS;
     lli testCases = 1;
