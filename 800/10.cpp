@@ -25,7 +25,7 @@ void solutionForProblem() {
                 if (i==0 || i==9 || j==0 || j==9) c+=1;
                 else if (i==1 || i==8 || j==1 || j==8) c+=2;
                 else if (i==2 || i==7 || j==2 || j==7) c+=3;
-                else if (i==3 || i==6 || j==3 || j==6) c += 4;
+                else if (i==3 || i==6 || j==3 || j==6) c+=4;
                 else c+=5;
             }
         }
