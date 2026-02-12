@@ -12,7 +12,7 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
 void solutionForProblem() {
-    lli x,k;
+    lli x, k;
     cin >> x >> k;
     if (x%k!=0) {
         cout << 1 << endl;
