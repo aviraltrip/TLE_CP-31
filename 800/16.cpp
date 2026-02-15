@@ -12,7 +12,21 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
 void solutionForProblem() {
-    
+    lli n,c=inf;
+    cin >> n;
+    vector<lli> a(n);
+    f(i,0,n) cin >> a[i];
+    f(i,0,n-1) {
+        if (a[i]>a[i+1]) {
+            cout << 0 << endl;
+            return;
+        }
+    }
+    f(i,0,n-1) {
+        lli req=((a[i+1]-a[i])/2)+1;
+        c=min(c,req);
+    }
+    cout << c << endl;
 }
 
 int main() {
