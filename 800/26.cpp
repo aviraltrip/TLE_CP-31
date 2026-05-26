@@ -12,7 +12,22 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
 void solutionForProblem() {
-    
+    lli n;
+    cin >> n;
+    vector<lli> a(n);
+    f(i,0,n) cin >> a[i];
+    bool poss=false;
+    f(i,0,n) {
+        f(j,i+1,n) {
+            lli gcda=__gcd(a[i],a[j]);
+            if(gcda<=2) {
+                poss=true;
+                break;
+            }
+        }
+        if(poss) break;
+    }
+    (poss) ? cout << "Yes\n":cout << "No\n";
 }
 
 int main() {
