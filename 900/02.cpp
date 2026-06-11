@@ -13,23 +13,33 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
  
 void solutionForProblem() {
-    lli n,k;
-    cin >> n >> k;
-    string s;
-    cin >> s;
-    vector<lli> freq(26,0);
-    for (char c:s) freq[c-'a']++;
-    lli odd=0;
-    f(i,0,26) {
-        if (freq[i]&1) odd++;
+    lli a,b;
+    cin >> a;
+    cin >> b;
+    lli c=a+b;
+    string sa=to_string(a);
+    string sb=to_string(b);
+    string sc=to_string(c);
+    string na="",nb="",nc="";
+    for (char d:sa) {
+        if (d!='0') na+=d;
     }
-    (odd<=k+1)?cout << "YES\n":cout << "NO\n";
+    for (char d:sb) {
+        if (d!='0') nb+=d;
+    }
+    for (char d:sc) {
+        if (d!='0') nc+=d;
+    }
+    lli x=stoi(na);
+    lli y=stoi(nb);
+    lli z=stoi(nc);
+    (x+y==z)?cout << "YES":cout << "NO";
 }
  
 int main() {
     NFS;
     lli testCases = 1;
-    cin >> testCases;
+    // cin >> testCases;
     while (testCases--) {
         solutionForProblem();
     }
