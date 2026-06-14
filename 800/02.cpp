@@ -12,7 +12,14 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
 void solutionForProblem() {
-    
+    lli n,x;
+    cin >> n >> x;
+    vector<lli> a(n);
+    f(i,0,n) cin >> a[i];
+    lli ans=a[0]; 
+    f(i,1,n) ans=max(ans,a[i]-a[i-1]);
+    ans=max(ans,2*(x-a[n-1]));
+    cout << ans << endl; 
 }
 
 int main() {
