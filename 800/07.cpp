@@ -12,7 +12,19 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
 void solutionForProblem() {
-    
+    lli n,m,c=0;
+    cin >> n >> m;
+    string x,s;
+    cin >> x >> s;
+    while (c<=6) {
+        if (x.find(s)!=string::npos) {
+            cout << c << endl;
+            return;
+        }
+        x+=x;
+        c++;
+    }
+    cout << -1 << endl;
 }
 
 int main() {
