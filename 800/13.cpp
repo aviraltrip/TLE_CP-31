@@ -19,7 +19,7 @@ void solutionForProblem() {
     lli minm = *min_element(a.begin(),a.end());
     vector<lli> b,c;
     f(i,0,n) {
-        if (a[i] == minm)  b.push_back(a[i]);
+        if (a[i] == minm)  b.push_back(a[i]);            
         else  c.push_back(a[i]);
     }
     if (c.size()==0) {
