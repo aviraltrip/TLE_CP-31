@@ -11,9 +11,23 @@ using namespace std;
 #define MOD 1e9+7 
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
-void solutionForProblem() {
-    
-}
+void solutionForProblem() { 
+    lli n; 
+    cin >> n; 
+    vector<lli> b(n); 
+    f(i,0,n) cin >> b[i]; 
+    vector<lli> a; 
+    a.push_back(b[0]); 
+    f(i,1,n) { 
+        if (b[i-1]<=b[i]) a.push_back(b[i]);
+        else { 
+            a.push_back(1); 
+            a.push_back(b[i]); 
+        } 
+    } 
+    cout << a.size() << endl; 
+    f(i,0,a.size()) cout << a[i] << " ";
+    cout << endl; }
 
 int main() {
     NFS;
