@@ -12,7 +12,25 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
 void solutionForProblem() {
-    
+    lli n;
+    cin >> n;
+    vector<lli> a(n);
+    f(i,0,n) cin >> a[i];
+    lli minm = *min_element(a.begin(),a.end());
+    vector<lli> b,c;
+    f(i,0,n) {
+        if (a[i] == minm)  b.push_back(a[i]);
+        else  c.push_back(a[i]);
+    }
+    if (c.size()==0) {
+        cout << -1 << endl;
+        return;
+    }
+    cout << b.size() << " " << c.size() << endl;
+    f(i,0,b.size()) cout << b[i] << " ";
+    cout << endl;
+    f(i,0,c.size()) cout << c[i] << " ";
+    cout << endl;
 }
 
 int main() {
