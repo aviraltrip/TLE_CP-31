@@ -11,9 +11,16 @@ using namespace std;
 #define MOD 1e9+7 
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
-void solutionForProblem() {
-    
-}
+void solutionForProblem() { 
+    lli n,k; 
+    cin >> n >> k; 
+    vector<lli> a(n); 
+    f(i,0,n) cin >> a[i]; 
+    bool found=false; 
+    f(i,0,n) { 
+        if(a[i]==k) found=true; 
+    } 
+    found ? cout << "YES\n" : cout << "NO\n"; }
 
 int main() {
     NFS;
