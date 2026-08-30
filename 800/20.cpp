@@ -12,7 +12,14 @@ using namespace std;
 #define NFS ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
 void solutionForProblem() {
-    
+    lli n;
+    cin >> n;
+    vector<lli> a(n);
+    f(i,0,n) cin >> a[i];
+    vector<lli> b(n);
+    f(i,0,n) b[i]=n+1-a[i];
+    f(i,0,n) cout << b[i] << " ";
+    cout << endl;
 }
 
 int main() {
